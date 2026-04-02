@@ -34,4 +34,7 @@ public class Order {
     @ManyToMany
     private List<Item> items;
 
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
+
 }
