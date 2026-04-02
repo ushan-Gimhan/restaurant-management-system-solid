@@ -17,13 +17,13 @@ public class ItemController {
     private final ItemService itemService;
 
     //CREATE
-    @PostMapping
+    @PostMapping("/create")
     public Item addItem(@RequestBody Item item) {
         return itemService.addItem(item);
     }
 
     //GET ALL
-    @GetMapping
+    @GetMapping("/getAllItems")
     public List<Item> getAllItems() {
         return itemService.getAllItems();
     }
